@@ -223,11 +223,11 @@ body {
     ),
     radial-gradient(ellipse at bottom, rgba(242, 242, 242, 0), transparent);
   transition: opacity 0.3s ease-in-out;
-  opacity: 0; /* Inicialmente transparente */
+  opacity: 0; 
 }
 
 .play-button:hover::before {
-  opacity: 1; /* Hacer visible al pasar el ratón */
+  opacity: 1; 
 }
 
 .play-button img {
