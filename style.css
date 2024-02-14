@@ -17,7 +17,7 @@ html,
   color: #f2f2f2;
   font-size: 16pt;
 
-  font-family: "Futura Bk BT";
+  font-family: "Futura Bk BT", "Inter";
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 400;
@@ -98,8 +98,8 @@ body {
   border: none;
   margin-top: 8px;
   margin-right: 16px;
-  font-family: "futura Lt BT";
-  font-weight: 400;
+  font-family: "futura Lt BT", "Inter";
+  font-weight: 300;
   font-size: 16pt;
   color: rgba(0, 0, 0, 0.5);
 }
@@ -139,7 +139,8 @@ body {
 
 .menu li a span {
   font-size: 16pt;
-  font-family: "Futura Bk BT";
+  font-family: "Futura Bk BT", "Inter";
+  font-weight: 400;
 }
 
 .menu ul li img {
@@ -148,7 +149,8 @@ body {
 
 .playlist span {
   font-size: 14pt !important;
-  font-family: "Futura Md BT" !important;
+  font-family: "Futura Md BT", "Inter" !important;
+  font-weight: 600;
 }
 
 .playlist {
@@ -163,6 +165,7 @@ body {
 .song-container {
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
   margin: 1vh 0;
   padding: 1%;
   flex: 0 0 58.5%;
@@ -184,11 +187,12 @@ body {
   display: flex;
   align-items: center;
   opacity: 80%;
+  padding: 1vh;
 }
 
 .playlist-name {
   margin-right: 16px;
-  font-family: "Futura";
+  font-family: "Futura", "Inter";
   font-weight: 900;
   font-size: 32px;
   color: #f2f2f2;
@@ -207,6 +211,7 @@ body {
   border: double 1px rgba(242, 242, 242, 0.4);
   overflow: hidden;
   position: relative;
+  box-shadow: 0 0 5px #13141a;
 }
 
 .play-button::before {
@@ -224,6 +229,7 @@ body {
     radial-gradient(ellipse at bottom, rgba(242, 242, 242, 0), transparent);
   transition: opacity 0.3s ease-in-out;
   opacity: 0; 
+  
 }
 
 .play-button:hover::before {
@@ -233,6 +239,44 @@ body {
 .play-button img {
   margin: 0 auto;
   opacity: 60% !important;
+}
+
+.track-list {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.8;
+  overflow-y:visible;
+}
+
+.track-list::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.songs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.songs img {
+  width: 56px;
+  border-radius: 10px;
+}
+
+.songs div {
+  display: flex;
+  flex-direction: column;
+}
+
+.songs span {
+  font-size: 16px;
+}
+
+.songs p {
+  font-size: 14px;
+  opacity: 0.7;
 }
 
 .player-container {
@@ -260,40 +304,46 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 10px;
-  margin: 2vh 0;
-  gap: 30px;
+
 }
 
 .album-cover {
   width: 100%;
-  height: 100%;
-  border-radius: 40px;
-  overflow: hidden;
+  height: 80%;
+  padding: 10px 0;
+  margin: 2vh 0;
+  gap: 30px;
 }
 
 .album-cover img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 40px;
+  overflow: hidden;
+  border: double 1px #f2f2f2;
+  box-shadow: 0 0 15px #13141a;
 }
 
 .song-details {
+  height: 20%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
+  gap: 15px;
 }
 
 .song-title {
   font-size: 32px;
-  font-family: "Futura";
+  font-family: "Futura", "Inter";
+  font-weight: 700;
   color: #f2f2f2;
 }
 
 .artist-name {
   font-size: 24px;
-  font-family: "Futura hv BT";
+  font-family: "Futura hv BT", "Inter";
+  font-weight: 700;
   opacity: 50%;
   color: #f2f2f2;
 }
@@ -320,7 +370,7 @@ body {
 
 .random,
 .repeat {
-  width: 30px;
+  width: 40px;
 }
 
 .play-pause {
