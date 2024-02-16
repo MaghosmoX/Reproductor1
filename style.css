@@ -68,7 +68,6 @@ body {
   backdrop-filter: blur (4px);
   border: double 1px rgba(242, 242, 242, 0.4);
   border-radius: 40px;
-  box-shadow: 0 0 24px rgba(242, 242, 242, 0.25);
   z-index: 10000;
 }
 
@@ -179,7 +178,6 @@ body {
   backdrop-filter: blur (4px);
   border: double 1px rgba(242, 242, 242, 0.4);
   border-radius: 40px;
-  box-shadow: 0 0 24px rgba(242, 242, 242, 0.25);
   z-index: 10000;
 }
 
@@ -333,7 +331,6 @@ p {
   backdrop-filter: blur (4px);
   border: double 1px rgba(242, 242, 242, 0.4);
   border-radius: 40px;
-  box-shadow: 0 0 24px rgba(242, 242, 242, 0.25);
   z-index: 100000;
   gap: 30px;
 }
@@ -342,6 +339,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  overflow: visible;
 }
 
 .album-cover {
@@ -350,9 +348,9 @@ p {
   /* padding: 10px 0; */
   margin: 2vh 0;
   gap: 30px;
-  box-shadow: 0 0 15px -3px #13141a;
+  border: double 1px #f2f2f2;
+  box-shadow: 0 0 20px #13141a;
   border-radius: 40px;
-  overflow: hidden;
 }
 
 .album-cover img {
