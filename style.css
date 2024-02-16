@@ -88,7 +88,7 @@ body {
   margin-top: 0 !important;
   margin-right: 16px;
   font-size: 17px;
-  opacity: 0.3;
+  opacity: 0.5;
   mix-blend-mode: overlay;
 }
 
@@ -228,12 +228,11 @@ body {
     ),
     radial-gradient(ellipse at bottom, rgba(242, 242, 242, 0), transparent);
   transition: opacity 0.3s ease-in-out;
-  opacity: 0; 
-  
+  opacity: 0;
 }
 
 .play-button:hover::before {
-  opacity: 1; 
+  opacity: 1;
 }
 
 .play-button img {
@@ -246,18 +245,27 @@ body {
   font-weight: 400;
   font-size: 16px;
   opacity: 0.8;
-  overflow-y:visible;
+  overflow-y: visible;
+  width: 100%;
 }
 
 .track-list::-webkit-scrollbar {
   background-color: transparent;
 }
 
+.track-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+
 .songs {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 0;
+  padding: 0.3rem 0;
 }
 
 .songs img {
@@ -265,18 +273,48 @@ body {
   border-radius: 10px;
 }
 
-.songs div {
+.main-song-info {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 
-.songs span {
+.title {
+  font-family: "Montserrat";
+  font-weight: 500;
   font-size: 16px;
+  opacity: 0.99;
+  transition: all 0.1s ease-in;
 }
 
-.songs p {
+.title:hover {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.author {
+  font-family: "Montserrat";
+  font-weight: 500;
   font-size: 14px;
   opacity: 0.7;
+}
+
+.author:hover {
+  opacity: 1;
+}
+
+.track-song-info {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  justify-content: flex-end;
+  opacity: 0.7 !important;
+}
+
+.track-song-info span,
+p {
+  font-family: "futura Md BT", "Inter";
+  font-size: 14px;
 }
 
 .player-container {
@@ -304,7 +342,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
 }
 
 .album-cover {
@@ -361,12 +398,7 @@ body {
   height: 40px;
   background-color: transparent;
   border: none;
-  
 }
-
-
-
-
 
 .random,
 .repeat {
@@ -378,12 +410,12 @@ body {
   height: 80px;
   border-radius: 100px;
   background: radial-gradient(
-    ellipse at left 10px,
-    rgba(242, 190, 92, 0.7),
-    transparent
-  ),
-  radial-gradient(ellipse at bottom, rgba(242, 242, 242, 0), transparent);
-transition: opacity 0.3s ease-in-out;
+      ellipse at left 10px,
+      rgba(242, 190, 92, 0.7),
+      transparent
+    ),
+    radial-gradient(ellipse at bottom, rgba(242, 242, 242, 0), transparent);
+  transition: opacity 0.3s ease-in-out;
   border: double 1px #f2f2f2;
 }
 
