@@ -27,8 +27,11 @@ const respuesta = axios.get("https://leonardoapi.onrender.com/songs")
                 div.addEventListener('click', () => {
 
                     document.getElementById('current-song-audio').setAttribute('src', song.path.audio)
-                })
+                    document.getElementById('current-song-img').setAttribute('src', song.path.front)
+                    document.getElementById('current-song-title').innerHTML = song.title
+                    document.getElementById('current-song-artist').innerHTML = song.author
 
+                })
                 document.getElementById('track-list').appendChild(div)
             })
          })

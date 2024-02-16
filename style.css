@@ -48,13 +48,13 @@ body {
   background: url(/img/Rectangle.png) repeat center;
   mix-blend-mode: overlay;
   z-index: -10;
-  opacity: 40%;
+  opacity: 50%;
 }
 
 .container-nav {
   flex: 0 0 16.5%;
   margin: 1vh;
-  padding: 1%;
+  padding: 2vh;
   height: 98vh;
   position: relative;
   top: 0;
@@ -74,9 +74,10 @@ body {
 .navbar {
   display: flex;
   flex-direction: column;
-  padding: 1%;
+  padding: 1vh;
   justify-content: center;
   align-items: flex-start;
+  
 }
 
 .navbar input {
@@ -89,6 +90,7 @@ body {
   font-size: 17px;
   opacity: 0.5;
   mix-blend-mode: overlay;
+  
 }
 
 .navbar input[type="text"] {
@@ -104,9 +106,9 @@ body {
 }
 
 .menu {
-  display: flex;
-  flex-direction: row;
+
   position: relative;
+  
 }
 
 .menu ul {
@@ -114,6 +116,7 @@ body {
   padding: 0;
   margin: 0;
   align-items: center;
+  
 }
 
 .menu li {
@@ -121,6 +124,11 @@ body {
   text-align: center;
   transition: all 0.3s ease-in;
   opacity: 0.6;
+  padding: 10px 0;
+}
+
+.menu li:last-child {
+  padding: 0;
 }
 
 .menu li:hover {
@@ -130,7 +138,7 @@ body {
 .menu li a {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  
   gap: 10px;
   text-align: right;
   justify-content: center;
@@ -166,7 +174,7 @@ body {
   align-items: flex-start;
   flex-direction: column;
   margin: 1vh 0;
-  padding: 1%;
+  padding: 2vh;
   flex: 0 0 58.5%;
   height: 98vh;
   background: radial-gradient(
@@ -179,13 +187,15 @@ body {
   border: double 1px rgba(242, 242, 242, 0.4);
   border-radius: 40px;
   z-index: 10000;
+
 }
 
 .song-info {
   display: flex;
   align-items: center;
   opacity: 80%;
-  padding: 1vh;
+  padding: 0 1vh;
+  overflow: visible;
 }
 
 .playlist-name {
@@ -207,7 +217,6 @@ body {
     radial-gradient(ellipse at bottom, rgba(242, 242, 242, 0), transparent);
   border-radius: 50%;
   border: double 1px rgba(242, 242, 242, 0.4);
-  overflow: hidden;
   position: relative;
   box-shadow: 0 0 5px #13141a;
 }
@@ -227,6 +236,7 @@ body {
     radial-gradient(ellipse at bottom, rgba(242, 242, 242, 0), transparent);
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
+
 }
 
 .play-button:hover::before {
@@ -236,13 +246,13 @@ body {
 .play-button img {
   margin: 0 auto;
   opacity: 60% !important;
+
 }
 
 .track-list {
   font-family: "Inter";
   font-weight: 400;
   font-size: 16px;
-  opacity: 0.8;
   overflow-y: visible;
   width: 100%;
 }
@@ -255,20 +265,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   cursor: pointer;
 }
+
 
 .songs {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 0.3rem 0;
+  padding: 0.5vh 0.6vh 1vh 0.6vh;
 }
+
+
+
 
 .songs img {
   width: 56px;
   border-radius: 10px;
+  opacity: 0.9;
 }
 
 .main-song-info {
@@ -281,8 +295,8 @@ body {
   font-family: "Montserrat";
   font-weight: 500;
   font-size: 16px;
-  opacity: 0.99;
-  transition: all 0.1s ease-in;
+  opacity: 0.9;
+  transition: all 0.3s ease-in-out;
 }
 
 .title:hover {
@@ -294,19 +308,16 @@ body {
   font-family: "Montserrat";
   font-weight: 500;
   font-size: 14px;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
-.author:hover {
-  opacity: 1;
-}
 
 .track-song-info {
   display: flex;
   align-items: center;
   gap: 3rem;
   justify-content: flex-end;
-  opacity: 0.7 !important;
+  opacity: 0.6 !important;
 }
 
 .track-song-info span,
@@ -320,7 +331,7 @@ p {
   flex-direction: column;
   flex: 0 0 23%;
   margin: 1vh;
-  padding: 1%;
+  padding: 2vh;
   height: 98vh;
   background: radial-gradient(
       ellipse at left 10px,
@@ -339,6 +350,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 40px;
   overflow: visible;
 }
 
@@ -346,7 +358,7 @@ p {
   width: 100%;
   height: 80%;
   /* padding: 10px 0; */
-  margin: 2vh 0;
+  margin: 2vh 0 0 0;
   gap: 30px;
   border: double 1px #f2f2f2;
   box-shadow: 0 0 20px #13141a;
@@ -365,18 +377,18 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 15px;
+  gap: 10px;
 }
 
 .song-title {
-  font-size: 32px;
+  font-size: 28px;
   font-family: "Futura", "Inter";
   font-weight: 700;
   color: #f2f2f2;
 }
 
 .artist-name {
-  font-size: 24px;
+  font-size: 20spx;
   font-family: "Futura hv BT", "Inter";
   font-weight: 700;
   opacity: 50%;
