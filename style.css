@@ -106,7 +106,7 @@ body {
 }
 
 .menu {
-
+  
   position: relative;
   
 }
@@ -158,11 +158,13 @@ body {
   font-size: 14pt !important;
   font-family: "Futura Md BT", "Inter" !important;
   font-weight: 600;
+  
 }
 
 .playlist {
   opacity: 0.3;
   transition: all 0.3s ease-in;
+
 }
 
 .playlist:hover {
@@ -394,6 +396,7 @@ p {
   opacity: 50%;
   color: #f2f2f2;
 }
+
 
 .player-controls {
   display: flex;

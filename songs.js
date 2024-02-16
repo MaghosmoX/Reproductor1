@@ -35,3 +35,13 @@ const respuesta = axios.get("https://leonardoapi.onrender.com/songs")
                 document.getElementById('track-list').appendChild(div)
             })
          })
+
+         document.getElementById('play').addEventListener('click', () => {
+          const audio = document.getElementById('current-song-audio')
+
+          if(audio.paused) {
+            audio.play()
+          } else {
+            audio.pause()
+          }
+         })
